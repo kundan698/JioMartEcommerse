@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+header {
+    background-color: #0078AD;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+#deliver {
+    font-weight: bold;
+    color: white;
+    transition: 0.5s;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+#deliver i {
+    padding: 5px;
+}
+
+#deliver:hover {
+    background: linear-gradient(#00000056, #00000031);
+}
+
+
+/* .nav-item input {
+    background-color: #0C5273;
+    border: none;
+    border-radius: 25px 0px 0px 25px;
+    color: white;
+    padding-left: 30px;
+    font-size: 18px;
+    padding: 6px;
+    width: 500px;
+} */
+
+
+/* form label {
+    position: relative;
+}
+
+button {
+    position: absolute;
+} */
+
+
+/* .nav-item button {
+    padding: 7.5px;
+    border: none;
+    border-radius: 0px 25px 25px 0px;
+    background-color: #0C5273
+} */
+
+
+/* form {
+    display: block;
+} */
+
+form input {
+    width: 550px;
+    height: 40px;
+    border: none;
+    border-radius: 0px 0px 0px 0px;
+    background-color: #0C5273;
+}
+
+form {
+    padding-bottom: 10px;
+}
+
+form #bbt {
+    border-radius: 25px 0px 0px 25px;
+    width: 50px;
+    color: white;
+    background-color: #0C5273;
+    padding-bottom: 5px;
+}
+
+form button {
+    border: none;
+    border-radius: 0px 25px 25px 0px;
+    background-color: #0C5273;
+    color: white;
+    width: 50px;
+    padding-bottom: 8px;
+}
+
+
+/* .nav-item #btns {
+    position: absolute;
+    padding: 8px;
+    color: white;
+    border: none;
+    border-radius: 0px 25px 25px 0px;
+    width: 100px;
+    background-color: #0C5273
+} */
+
+
+/* #btns {
+    border: none;
+    display: block;
+    position: absolute;
+    z-index: 3;
+    background-color: transparent;
+    color: white;
+    padding: 8px;
+} */
+
+#searchs span {
+    color: white;
+    background-color: #0C5273;
+    border: none;
+}
+
+
+/* 
+#searchs span input {
+    margin-top: 20px;
+    background-color: #0C5273;
+} */
+
+.sign a img {
+    padding: 5px;
+}
+
+#ItemsBar {
+    background-color: #0C5273;
+    position: sticky;
+    top: 62px;
+    z-index: 3;
+}
+
+.Items li a {
+    margin: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #12b4d8;
+}
+
+#clr>ul>li {
+    color: #c70f0f !important;
+    padding: 0;
+    font-weight: normal;
+}
+
+.category {
+    border: 0.5px solid lightgray;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+#home li {
+    list-style: none;
+    font-weight: bold;
+    color: #0C5273;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#home li:hover {
+    color: #0078AD;
+}
+
+.bb p {
+    font-weight: 700;
+}
+
+.ProductItems {
+    border: 0.5px solid lightgray;
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.spn {
+    font-size: 14px;
+}
+
+.spn1 {
+    font-size: 15px;
+    color: green;
+    background: linear-gradient(#00800020, #00800035);
+}
+
+.Counter #Carts {
+    border: none;
+    background-color: #0078AD;
+    padding: 5px;
+    color: white;
+    font-size: 18px;
+}
+
+.Counter #Add {
+    padding: 5px;
+    border: 0.5px solid lightgray;
+    font-size: 18px;
+    width: 40px;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.Counter #btn {
+    padding: 5px;
+    border: 0.5px solid lightgray;
+    font-size: 18px;
+    width: 40px;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.Counter #Sub {
+    padding: 5px;
+    border: 0.5px solid lightgray;
+    font-size: 18px;
+    width: 40px;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.filters {
+    border: 0.5px solid lightgray;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.filters input {
+    height: 15px;
+    width: 15px;
+}
+
+.filters label {
+    display: block;
+    padding: 10px;
+    /*  border-bottom: 0.5px solid lightgray; */
+}
+
+.filters label b {
+    font-size: 14px;
+    font-weight: normal;
+    padding-left: 10px;
+}
+
+.item img {
+    border-radius: 10px;
+}
+
+.img1 img {
+    border-radius: 10px;
+}
+
+.GroceryItems {
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.GroceryItems p {
+    font-weight: 700;
+    padding-left: 10px;
+}
+
+.GroceryItems h5 {
+    padding-left: 10px;
+}
+
+.mega img {
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.radius img {
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.cont img {
+    width: 100%;
+    border-radius: 10px;
+    height: 500px;
+}
+
+.shop img {
+    border-radius: 8px;
+}
+
+.contents p {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.contents p:hover {
+    background-color: #f9f8fd;
+    color: #0078AD;
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #f9f8fd;
+    padding: 20px;
+}
+
+.signs #demo {
+    margin-left: 40px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+}
+
+.less #pop {
+    position: relative;
+}
+
+.round {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: #c70f0f;
+    border-radius: 50%;
+    top: 15px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.cc {
+    text-align: center;
+    font-size: 30px;
+    color: #0078AD;
+}
+
+.spans {
+    color: red;
+    font-size: 14px;
+}
+
+.ProductItems {
+    position: relative;
+}
+
+.heart {
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+.GroceryItems {
+    position: relative;
+}
+
+.heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.heart i {
+    font-size: 30px;
+    font-weight: 200;
+}

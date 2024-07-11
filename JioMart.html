@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap css link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <!-- slider css link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <!-- local css link -->
+    <link rel="stylesheet" href="CSS/Style.css">
+</head>
+
+<body>
+
+
+    <header class="container-fluid  header p-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg " id="">
+                        <a href="#" class="navbar-brand">
+                            <img src="https://www.jiomart.com/assets/ds2web/images/Jiomart-logo-ds2.0.svg?v=24" alt="">
+                        </a>
+                        <!--  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#MenuItems" aria-controls="navbarScroll" aria-expanded="false">
+                            <span class="navbar-toggler-icon"></span>
+                          </button> -->
+                        <div class="collapse navbar-collapse" id="Menu">
+                            <ul class="navbar-nav ">
+                                <li class="nav-item align-content-center">
+                                    <a href="#" class="nav-link" id="deliver"><i class="fa-solid fa-location-dot"></i>Deliver to Mumbai 400020</a>
+
+                                </li>
+                                <li class="nav-item d-block">
+                                    <a href="#" class="nav-link mt-2">
+                                        <!--  <button id="btns"><i class="fa-solid fa-magnifying-glass"></i></button> -->
+                                        <!-- <div class="input-group mb-1" id="searchs">
+                                            <span class="input-group-text"><img src="https://www.jiomart.com/assets/ds2web/jds-icons/ds-web-search.svg" alt=""></span>
+                                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                            <span class="input-group-text"><img src="https://www.jiomart.com/assets/ds2web/jds-icons/ds-list-icon.svg" alt=""></span> -->
+                                        <form action="" class="d-flex">
+                                            <button id="bbt"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                            <input type="text" placeholder="Jio Mart">
+                                            <button><img src="https://www.jiomart.com/assets/ds2web/jds-icons/ds-list-icon.svg" alt=""></button>
+
+                                        </form>
+
+
+                                    </a>
+
+                                </li>
+
+                                <li class="nav-item align-content-center">
+                                    <a href="#" class="nav-link" id="deliver"><img src="https://www.jiomart.com/assets/ds2web/jds-icons/cart-icon.svg" alt=""></a>
+
+                                </li>
+                                <li class="nav-item align-content-center sign">
+                                    <a href="#" class="nav-link" id="deliver"><img src="https://www.jiomart.com/assets/ds2web/jds-icons/new-ds2-profile-icon.svg" alt="">Sign In</a>
+
+                                </li>
+
+
+
+                            </ul>
+
+                        </div>
+
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="container-fluid" id="ItemsBar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg justify-content-between">
+                        <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#MenuItems" aria-controls="navbarScroll" aria-expanded="false">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+
+                        <div class="collapse navbar-collapse" id="MenuItems">
+
+                            <ul class="navbar-nav Items">
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Groceries</a>
+
+                                    <ul class="dropdown-menu " id="clr">
+                                        <li><a class="dropdown-item" href="#">Biscuits, Drinks & <br>Packaged food</a></li>
+                                        <li><a class="dropdown-item" href="#">Fruits & vegetables</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Dairy & bakery</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care & Beauty</a></li>
+                                        <li><a class="dropdown-item" href="#">Home Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Kitchen Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Mom & Baby Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Pet Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Toys, Games & fitness</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care</a></li>
+
+
+                                    </ul>
+
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Premium Fruits</a>
+
+                                    <ul class="dropdown-menu " id="clr">
+                                        <li><a class="dropdown-item" href="#">Biscuits, Drinks & <br>Packaged food</a></li>
+                                        <li><a class="dropdown-item" href="#">Fruits & vegetables</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Dairy & bakery</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care & Beauty</a></li>
+                                        <li><a class="dropdown-item" href="#">Home Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Kitchen Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Mom & Baby Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Pet Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Toys, Games & fitness</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care</a></li>
+
+
+                                    </ul>
+
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Home & Kitchen Needs</a>
+
+                                    <ul class="dropdown-menu " id="clr">
+                                        <li><a class="dropdown-item" href="#">Biscuits, Drinks & <br>Packaged food</a></li>
+                                        <li><a class="dropdown-item" href="#">Fruits & vegetables</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Dairy & bakery</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care & Beauty</a></li>
+                                        <li><a class="dropdown-item" href="#">Home Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Kitchen Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Mom & Baby Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Pet Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Toys, Games & fitness</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care</a></li>
+
+
+                                    </ul>
+
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Fashion</a>
+
+
+                                    <ul class="dropdown-menu " id="clr">
+                                        <li><a class="dropdown-item" href="#">Biscuits, Drinks & <br>Packaged food</a></li>
+                                        <li><a class="dropdown-item" href="#">Fruits & vegetables</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Dairy & bakery</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care & Beauty</a></li>
+                                        <li><a class="dropdown-item" href="#">Home Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Kitchen Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Mom & Baby Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Pet Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Toys, Games & fitness</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care</a></li>
+
+
+                                    </ul>
+
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Electronics</a>
+
+                                    <ul class="dropdown-menu " id="clr">
+                                        <li><a class="dropdown-item" href="#">Biscuits, Drinks & <br>Packaged food</a></li>
+                                        <li><a class="dropdown-item" href="#">Fruits & vegetables</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Dairy & bakery</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care & Beauty</a></li>
+                                        <li><a class="dropdown-item" href="#">Home Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Kitchen Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Mom & Baby Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Pet Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Toys, Games & fitness</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care</a></li>
+
+
+                                    </ul>
+
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Jwellery</a>
+
+                                    <ul class="dropdown-menu " id="clr">
+                                        <li><a class="dropdown-item" href="#">Biscuits, Drinks & <br>Packaged food</a></li>
+                                        <li><a class="dropdown-item" href="#">Fruits & vegetables</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Dairy & bakery</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care & Beauty</a></li>
+                                        <li><a class="dropdown-item" href="#">Home Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Kitchen Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Mom & Baby Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Pet Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Toys, Games & fitness</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care</a></li>
+
+
+                                    </ul>
+
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Home Improvement</a>
+
+                                    <ul class="dropdown-menu " id="clr">
+                                        <li><a class="dropdown-item" href="#">Biscuits, Drinks & <br>Packaged food</a></li>
+                                        <li><a class="dropdown-item" href="#">Fruits & vegetables</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Dairy & bakery</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care & Beauty</a></li>
+                                        <li><a class="dropdown-item" href="#">Home Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Kitchen Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Mom & Baby Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Pet Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Toys, Games & fitness</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care</a></li>
+
+
+                                    </ul>
+
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Wellness</a>
+
+                                    <ul class="dropdown-menu " id="clr">
+                                        <li><a class="dropdown-item" href="#">Biscuits, Drinks & <br>Packaged food</a></li>
+                                        <li><a class="dropdown-item" href="#">Fruits & vegetables</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Dairy & bakery</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care & Beauty</a></li>
+                                        <li><a class="dropdown-item" href="#">Home Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Kitchen Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Mom & Baby Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Pet Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Toys, Games & fitness</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care</a></li>
+
+
+                                    </ul>
+
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">All Categories</a>
+
+                                </li>
+
+
+
+
+                            </ul>
+                        </div>
+
+                    </nav>
+
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 ">
+
+                    <ul class="d-flex p-3" id="home">
+                        <li>Home ></li>
+                        <li>All Categories ></li>
+                        <li>Categories ></li>
+                        <li>Biscuits Drinks & Packeged food ></li>
+
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="category">
+                        <h2>Category</h2>
+
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                     Biscuits,Drinks & Packaged...
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <p>Chips & namkeen</p>
+                                        <p>Biscuits & Cookies</p>
+                                        <p>Chocolates & Candies</p>
+                                        <p>Indian Sweets</p>
+                                        <p>Drinks & Juices</p>
+                                        <p>Breakfast Creals</p>
+                                        <p>Noodles Pasta </p>
+                                        <p>Ready to Cook & Eat</p>
+                                        <p>Spread Sauces & Ketchup</p>
+                                        <p>Pickles,Chuteny & Flavouring</p>
+                                        <p>Tea</p>
+                                        <p>Coffee</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                     Fruits & vegetables...
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <p>Chips & namkeen</p>
+                                        <p>Biscuits & Cookies</p>
+                                        <p>Chocolates & Candies</p>
+                                        <p>Indian Sweets</p>
+                                        <p>Drinks & Juices</p>
+                                        <p>Breakfast Creals</p>
+                                        <p>Noodles Pasta </p>
+                                        <p>Ready to Cook & Eat</p>
+                                        <p>Spread Sauces & Ketchup</p>
+                                        <p>Pickles,Chuteny & Flavouring</p>
+                                        <p>Tea</p>
+                                        <p>Coffee</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    Cooking Essential
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <p>Chips & namkeen</p>
+                                        <p>Biscuits & Cookies</p>
+                                        <p>Chocolates & Candies</p>
+                                        <p>Indian Sweets</p>
+                                        <p>Drinks & Juices</p>
+                                        <p>Breakfast Creals</p>
+                                        <p>Noodles Pasta </p>
+                                        <p>Ready to Cook & Eat</p>
+                                        <p>Spread Sauces & Ketchup</p>
+                                        <p>Pickles,Chuteny & Flavouring</p>
+                                        <p>Tea</p>
+                                        <p>Coffee</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                     Dairy & Bakery
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <p>Chips & namkeen</p>
+                                        <p>Biscuits & Cookies</p>
+                                        <p>Chocolates & Candies</p>
+                                        <p>Indian Sweets</p>
+                                        <p>Drinks & Juices</p>
+                                        <p>Breakfast Creals</p>
+                                        <p>Noodles Pasta </p>
+                                        <p>Ready to Cook & Eat</p>
+                                        <p>Spread Sauces & Ketchup</p>
+                                        <p>Pickles,Chuteny & Flavouring</p>
+                                        <p>Tea</p>
+                                        <p>Coffee</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                    Personal Care & Beauty
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <p>Chips & namkeen</p>
+                                        <p>Biscuits & Cookies</p>
+                                        <p>Chocolates & Candies</p>
+                                        <p>Indian Sweets</p>
+                                        <p>Drinks & Juices</p>
+                                        <p>Breakfast Creals</p>
+                                        <p>Noodles Pasta </p>
+                                        <p>Ready to Cook & Eat</p>
+                                        <p>Spread Sauces & Ketchup</p>
+                                        <p>Pickles,Chuteny & Flavouring</p>
+                                        <p>Tea</p>
+                                        <p>Coffee</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                                    Home Care
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <p>Chips & namkeen</p>
+                                        <p>Biscuits & Cookies</p>
+                                        <p>Chocolates & Candies</p>
+                                        <p>Indian Sweets</p>
+                                        <p>Drinks & Juices</p>
+                                        <p>Breakfast Creals</p>
+                                        <p>Noodles Pasta </p>
+                                        <p>Ready to Cook & Eat</p>
+                                        <p>Spread Sauces & Ketchup</p>
+                                        <p>Pickles,Chuteny & Flavouring</p>
+                                        <p>Tea</p>
+                                        <p>Coffee</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                                     Kitchen Care
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <p>Chips & namkeen</p>
+                                        <p>Biscuits & Cookies</p>
+                                        <p>Chocolates & Candies</p>
+                                        <p>Indian Sweets</p>
+                                        <p>Drinks & Juices</p>
+                                        <p>Breakfast Creals</p>
+                                        <p>Noodles Pasta </p>
+                                        <p>Ready to Cook & Eat</p>
+                                        <p>Spread Sauces & Ketchup</p>
+                                        <p>Pickles,Chuteny & Flavouring</p>
+                                        <p>Tea</p>
+                                        <p>Coffee</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                                    Mom & Baby Care
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <p>Chips & namkeen</p>
+                                        <p>Biscuits & Cookies</p>
+                                        <p>Chocolates & Candies</p>
+                                        <p>Indian Sweets</p>
+                                        <p>Drinks & Juices</p>
+                                        <p>Breakfast Creals</p>
+                                        <p>Noodles Pasta </p>
+                                        <p>Ready to Cook & Eat</p>
+                                        <p>Spread Sauces & Ketchup</p>
+                                        <p>Pickles,Chuteny & Flavouring</p>
+                                        <p>Tea</p>
+                                        <p>Coffee</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                                    Pet Care
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body bb">
+                                        <p>Chips & namkeen</p>
+                                        <p>Biscuits & Cookies</p>
+                                        <p>Chocolates & Candies</p>
+                                        <p>Indian Sweets</p>
+                                        <p>Drinks & Juices</p>
+                                        <p>Breakfast Creals</p>
+                                        <p>Noodles Pasta </p>
+                                        <p>Ready to Cook & Eat</p>
+                                        <p>Spread Sauces & Ketchup</p>
+                                        <p>Pickles,Chuteny & Flavouring</p>
+                                        <p>Tea</p>
+                                        <p>Coffee</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-lg-3 mt-5">
+                    <div class="ProductItems">
+                        <img src="https://www.jiomart.com/images/product/original/490009551/haldiram-s-bhujia-sev-1-kg-product-images-o490009551-p490009551-0-202307131818.jpg?im=Resize=(360,360)" alt="" class="img-fluid">
+
+                        <img src="https://www.jiomart.com/assets/ds2web/jds-icons/icon-veg.svg" alt=""><br>
+                        <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" width="100px">
+                        <p>Haldiram's bhujia sev 1kg</p>
+                        <br>
+                        <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+
+                        <div class="Counter">
+                            <button id="Carts">Add Cart</button>
+                            <button id="Add">+</button>
+                            <button id="btn">0</button>
+                            <button id="Sub">-</button>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-lg-3 mt-5">
+                    <div class="ProductItems">
+                        <img src="https://www.jiomart.com/images/product/original/491551827/bingo-original-style-chilli-sprinkled-potato-chips-90-g-product-images-o491551827-p491551827-0-202308291300.jpg?im=Resize=(360,360)" alt="" class="img-fluid">
+
+                        <img src="https://www.jiomart.com/assets/ds2web/jds-icons/icon-veg.svg" alt=""><br>
+                        <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" width="100px">
+                        <p>Haldiram's bhujia sev 1kg</p>
+                        <br>
+                        <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+
+                        <div class="Counter">
+                            <button id="Carts">Add Cart</button>
+                            <button id="Add">+</button>
+                            <button id="btn">0</button>
+                            <button id="Sub">-</button>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-lg-3 mt-5">
+                    <div class="ProductItems">
+                        <img src="https://www.jiomart.com/images/product/original/491696354/lay-s-american-style-cream-onion-potato-chips-90-g-product-images-o491696354-p590121272-0-202307142033.jpg?im=Resize=(360,360)" alt="" class="img-fluid">
+
+                        <img src="https://www.jiomart.com/assets/ds2web/jds-icons/icon-veg.svg" alt=""><br>
+                        <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" width="100px">
+                        <p>Haldiram's bhujia sev 1kg</p>
+                        <br>
+                        <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+
+                        <div class="Counter">
+                            <button id="Carts">Add Cart</button>
+                            <button id="Add">+</button>
+                            <button id="btn">0</button>
+                            <button id="Sub">-</button>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="container-fluid mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="filters">
+                        <h2>Filters</h2>
+                        <h5>Availability</h5>
+                        <label for="">
+                        <input type="checkbox">
+                       
+                        <b>Out of Stock</b>
+                      </label>
+
+
+
+
+                        <h5 class="border-bottom">Category</h5>
+                        <label for="">
+                        <input type="checkbox">
+                       
+                        <b>Chips & Corn Snacksk</b>
+                        
+                      </label>
+                        <label for="">
+                        <input type="checkbox">
+                       
+                        <b>Roasted Chana</b>
+                        
+                      </label>
+                        </label>
+                        <label for="">
+                      <input type="checkbox">
+                   
+                      <b>Sweet Snacks</b>
+
+                      <h5 class="border-bottom">Brand</h5>
+                      <label >
+                      <input type="checkbox">
+                     
+                      <b>90's Mill</b>
+                      
+                    </label>
+                        <label>
+                            <input type="checkbox">
+                     
+                                 <b>Aakash</b>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                     
+                                 <b >BABUS LAXMINARAYAN</b>
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                     
+                                 <b>BHUJIALALJI</b>
+                        </label>
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row">
+
+                        <div class="col-lg-4">
+                            <div class="ProductItems">
+                                <img src="https://www.jiomart.com/images/product/original/490009551/haldiram-s-bhujia-sev-1-kg-product-images-o490009551-p490009551-0-202307131818.jpg?im=Resize=(360,360)" alt="" class="img-fluid">
+
+                                <img src="https://www.jiomart.com/assets/ds2web/jds-icons/icon-veg.svg" alt=""><br>
+                                <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" width="100px">
+                                <p>Haldiram's bhujia sev 1kg</p>
+                                <br>
+                                <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+
+                                <div class="Counter">
+                                    <button id="Carts">Add Cart</button>
+                                    <button id="Add">+</button>
+                                    <button id="btn">0</button>
+                                    <button id="Sub">-</button>
+                                </div>
+                                <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-lg-4">
+                            <div class="ProductItems">
+                                <img src="https://www.jiomart.com/images/product/original/490009551/haldiram-s-bhujia-sev-1-kg-product-images-o490009551-p490009551-0-202307131818.jpg?im=Resize=(360,360)" alt="" class="img-fluid">
+
+                                <img src="https://www.jiomart.com/assets/ds2web/jds-icons/icon-veg.svg" alt=""><br>
+                                <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" width="100px">
+                                <p>Haldiram's bhujia sev 1kg</p>
+                                <br>
+                                <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+
+                                <div class="Counter">
+                                    <button id="Carts">Add Cart</button>
+                                    <button id="Add">+</button>
+                                    <button id="btn">0</button>
+                                    <button id="Sub">-</button>
+                                </div>
+                                <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-lg-4">
+                            <div class="ProductItems">
+                                <img src="https://www.jiomart.com/images/product/original/490009551/haldiram-s-bhujia-sev-1-kg-product-images-o490009551-p490009551-0-202307131818.jpg?im=Resize=(360,360)" alt="" class="img-fluid">
+
+                                <img src="https://www.jiomart.com/assets/ds2web/jds-icons/icon-veg.svg" alt=""><br>
+                                <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" width="100px">
+                                <p>Haldiram's bhujia sev 1kg</p>
+                                <br>
+                                <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+
+                                <div class="Counter">
+                                    <button id="Carts">Add Cart</button>
+                                    <button id="Add">+</button>
+                                    <button id="btn">0</button>
+                                    <button id="Sub">-</button>
+                                </div>
+                                <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 mt-5">
+                            <div class="ProductItems">
+                                <img src="https://www.jiomart.com/images/product/original/490009551/haldiram-s-bhujia-sev-1-kg-product-images-o490009551-p490009551-0-202307131818.jpg?im=Resize=(360,360)" alt="" class="img-fluid">
+
+                                <img src="https://www.jiomart.com/assets/ds2web/jds-icons/icon-veg.svg" alt=""><br>
+                                <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" width="100px">
+                                <p>Haldiram's bhujia sev 1kg</p>
+                                <br>
+                                <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+
+                                <div class="Counter">
+                                    <button id="Carts">Add Cart</button>
+                                    <button id="Add">+</button>
+                                    <button id="btn">0</button>
+                                    <button id="Sub">-</button>
+                                    <div class="heart">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-4 mt-5">
+                            <div class="ProductItems">
+                                <img src="https://www.jiomart.com/images/product/original/490009551/haldiram-s-bhujia-sev-1-kg-product-images-o490009551-p490009551-0-202307131818.jpg?im=Resize=(360,360)" alt="" class="img-fluid">
+
+                                <img src="https://www.jiomart.com/assets/ds2web/jds-icons/icon-veg.svg" alt=""><br>
+                                <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" width="100px">
+                                <p>Haldiram's bhujia sev 1kg</p>
+                                <br>
+                                <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+
+                                <div class="Counter">
+                                    <button id="Carts">Add Cart</button>
+                                    <button id="Add">+</button>
+                                    <button id="btn">0</button>
+                                    <button id="Sub">-</button>
+                                </div>
+                                <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 mt-5">
+                            <div class="ProductItems">
+                                <img src="https://www.jiomart.com/images/product/original/491551829/bingo-achaari-masti-mad-angles-130-g-product-images-o491551829-p491551829-0-202308182201.jpg?im=Resize=(360,360)" alt="" class="img-fluid">
+
+                                <img src="https://www.jiomart.com/assets/ds2web/jds-icons/icon-veg.svg" alt=""><br>
+                                <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" width="100px">
+                                <p>Haldiram's bhujia sev 1kg</p>
+                                <br>
+                                <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+
+                                <div class="Counter">
+                                    <button id="Carts">Add Cart</button>
+                                    <button id="Add">+</button>
+                                    <button id="btn">0</button>
+                                    <button id="Sub">-</button>
+                                </div>
+                                <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 mt-5">
+                            <div class="ProductItems">
+                                <img src="https://www.jiomart.com/images/product/original/491696355/lay-s-india-s-magic-masala-potato-chips-90-g-product-images-o491696355-p590121911-0-202307142035.jpg?im=Resize=(360,360)" alt="" class="img-fluid">
+
+                                <img src="https://www.jiomart.com/assets/ds2web/jds-icons/icon-veg.svg" alt=""><br>
+                                <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" width="100px">
+                                <p>Haldiram's bhujia sev 1kg</p>
+                                <br>
+                                <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+
+                                <div class="Counter">
+                                    <button id="Carts">Add Cart</button>
+                                    <button id="Add">+</button>
+                                    <button id="btn">0</button>
+                                    <button id="Sub">-</button>
+                                </div>
+                                <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 mt-5">
+                            <div class="ProductItems">
+                                <img src="https://www.jiomart.com/images/product/original/490005293/act-ii-golden-sizzle-instant-popcorn-30-g-product-images-o490005293-p490005293-0-202305301936.jpg?im=Resize=(360,360)" alt="" class="img-fluid">
+
+                                <img src="https://www.jiomart.com/assets/ds2web/jds-icons/icon-veg.svg" alt=""><br>
+                                <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" width="100px">
+                                <p>Haldiram's bhujia sev 1kg</p>
+                                <br>
+                                <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+
+                                <div class="Counter">
+                                    <button id="Carts">Add Cart</button>
+                                    <button id="Add">+</button>
+                                    <button id="btn">0</button>
+                                    <button id="Sub">-</button>
+                                </div>
+                                <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mt-5">
+                            <div class="ProductItems">
+                                <img src="https://www.jiomart.com/images/product/original/490070538/bikaji-bikaner-chowpati-bhelpuri-110-g-product-images-o490070538-p608498429-0-202403191711.jpg?im=Resize=(360,360)" alt="" class="img-fluid">
+
+                                <img src="https://www.jiomart.com/assets/ds2web/jds-icons/icon-veg.svg" alt=""><br>
+                                <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" width="100px">
+                                <p>Haldiram's bhujia sev 1kg</p>
+                                <br>
+                                <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+
+                                <div class="Counter">
+                                    <button id="Carts">Add Cart</button>
+                                    <button id="Add">+</button>
+                                    <button id="btn">0</button>
+                                    <button id="Sub">-</button>
+                                </div>
+                                <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mt-5">
+                            <div class="ProductItems">
+                                <img src="https://www.jiomart.com/images/product/original/490003816/kurkure-masala-munch-77-g-product-images-o490003816-p490003816-0-202311101751.jpg?im=Resize=(360,360)" alt="" class="img-fluid">
+
+                                <img src="https://www.jiomart.com/assets/ds2web/jds-icons/icon-veg.svg" alt=""><br>
+                                <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" width="100px">
+                                <p>Haldiram's bhujia sev 1kg</p>
+                                <br>
+                                <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+
+                                <div class="Counter">
+                                    <button id="Carts">Add Cart</button>
+                                    <button id="Add">+</button>
+                                    <button id="btn">0</button>
+                                    <button id="Sub">-</button>
+                                </div>
+                                <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mt-5">
+                            <div class="ProductItems">
+                                <img src="https://www.jiomart.com/images/product/original/491335169/bikaji-soya-sticks-200-g-product-images-o491335169-p590033097-0-202203152214.jpg?im=Resize=(360,360)" alt="" class="img-fluid">
+
+                                <img src="https://www.jiomart.com/assets/ds2web/jds-icons/icon-veg.svg" alt=""><br>
+                                <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" width="100px">
+                                <p>Haldiram's bhujia sev 1kg</p>
+                                <br>
+                                <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+
+                                <div class="Counter">
+                                    <button id="Carts">Add Cart</button>
+                                    <button id="Add">+</button>
+                                    <button id="btn">0</button>
+                                    <button id="Sub">-</button>
+                                </div>
+                                <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mt-5">
+                            <div class="ProductItems">
+                                <img src="https://www.jiomart.com/images/product/original/490009549/haldiram-s-aloo-bhujia-1-kg-product-images-o490009549-p490009549-0-202307131823.jpg?im=Resize=(360,360)" alt="" class="img-fluid">
+
+                                <img src="https://www.jiomart.com/assets/ds2web/jds-icons/icon-veg.svg" alt=""><br>
+                                <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" width="100px">
+                                <p>Haldiram's bhujia sev 1kg</p>
+                                <br>
+                                <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+
+                                <div class="Counter">
+                                    <button id="Carts">Add Cart</button>
+                                    <button id="Add">+</button>
+                                    <button id="btn">0</button>
+                                    <button id="Sub">-</button>
+                                </div>
+                                <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mt-5">
+                            <div class="ProductItems">
+                                <img src="https://www.jiomart.com/images/product/original/491551826/bingo-salt-sprinkled-potato-chips-100-g-product-images-o491551826-p491551826-0-202308181841.jpg?im=Resize=(360,360)" alt="" class="img-fluid">
+
+                                <img src="https://www.jiomart.com/assets/ds2web/jds-icons/icon-veg.svg" alt=""><br>
+                                <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" width="100px">
+                                <p>Haldiram's bhujia sev 1kg</p>
+                                <br>
+                                <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+
+                                <div class="Counter">
+                                    <button id="Carts">Add Cart</button>
+                                    <button id="Add">+</button>
+                                    <button id="btn">0</button>
+                                    <button id="Sub">-</button>
+                                </div>
+                                <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mt-5">
+                            <div class="ProductItems">
+                                <img src="https://www.jiomart.com/images/product/original/490009368/haldiram-s-moong-dal-400-g-product-images-o490009368-p490009368-0-202302102205.jpg?im=Resize=(360,360)" alt="" class="img-fluid">
+
+                                <img src="https://www.jiomart.com/assets/ds2web/jds-icons/icon-veg.svg" alt=""><br>
+                                <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" width="100px">
+                                <p>Haldiram's bhujia sev 1kg</p>
+                                <br>
+                                <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+
+                                <div class="Counter">
+                                    <button id="Carts">Add Cart</button>
+                                    <button id="Add">+</button>
+                                    <button id="btn">0</button>
+                                    <button id="Sub">-</button>
+                                </div>
+                                <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mt-5">
+                            <div class="ProductItems">
+                                <img src="https://www.jiomart.com/images/product/original/491695214/bikaji-tana-bana-khatta-meetha-1-kg-product-images-o491695214-p491695214-0-202203171026.jpg?im=Resize=(360,360)" alt="" class="img-fluid">
+
+                                <img src="https://www.jiomart.com/assets/ds2web/jds-icons/icon-veg.svg" alt=""><br>
+                                <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" width="100px">
+                                <p>Haldiram's bhujia sev 1kg</p>
+                                <br>
+                                <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+
+                                <div class="Counter">
+                                    <button id="Carts">Add Cart</button>
+                                    <button id="Add">+</button>
+                                    <button id="btn">0</button>
+                                    <button id="Sub">-</button>
+                                </div>
+                                <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!-- <div class="col-lg-4 mt-5">
+                            <div class="ProductItems">
+                                <img src="https://www.jiomart.com/images/product/original/490009367/haldiram-s-mixture-350-g-product-images-o490009367-p490009367-0-202307141316.jpg?im=Resize=(360,360)" alt="" class="img-fluid">
+
+                                <img src="https://www.jiomart.com/assets/ds2web/jds-icons/icon-veg.svg" alt=""><br>
+                                <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" width="100px">
+                                <p>Haldiram's bhujia sev 1kg</p>
+                                <br>
+                                <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+
+                                <div class="Counter">
+                                    <button id="Carts">Add Cart</button>
+                                    <button id="Add">+</button>
+                                    <button id="btn">0</button>
+                                    <button id="Sub">-</button>
+                                </div>
+
+
+                            </div>
+                        </div> -->
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer class="container-fluid mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="contents">
+                        <h5>All Categories</h5>
+                        <p>Grocery</p>
+                        <p>Electronics</p>
+                        <p>Fashion</p>
+                        <p>Home & Kitchen</p>
+                        <p>Premium Fruits</p>
+                        <p>Books</p>
+                        <p>Furniture</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="contents">
+                        <h5>Popular Categories</h5>
+                        <p>Steples</p>
+                        <p>Babrages</p>
+                        <p>Personal Care</p>
+                        <p>Home Care</p>
+                        <p>Fruits & Vegitables</p>
+                        <p>Baby Care</p>
+                        <p>Baby Care & Branded Foods</p>
+                        <p>Dairy & Bakery</p>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="contents">
+                        <h5>Customer Account</h5>
+                        <p>My Account</p>
+                        <p>My Orders</p>
+                        <p>Wishlist</p>
+                        <p>Payment Methods</p>
+                        <p>Delivery Addresses</p>
+                        <p>Jiomart Wallet</p>
+
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="contents">
+                        <h5>Help & Support</h5>
+                        <p>About Us</p>
+                        <p>FAQ</p>
+                        <p>Terms & Conditions</p>
+                        <p>Privacy Policy</p>
+                        <p>E-Waste</p>
+                        <p>Cancellation & Return <br> Policy</p>
+                        <p>Shipping & Delivery <br> Poilicy</p>
+                        <p>AC Installation by resQ</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div>
+                        <h5>Contact Us</h5>
+                        <p>WhatsApp us: 70003 70003 Call us: 1800 890 1222 8:00 AM to 8:00 PM, 365 days</p> <br>
+                        <p>Should you encounter any bugs, glitches, lack of functionality, delayed deliveries, billing errors or other problems on the website, please email us on cs@jiomart.com</p>
+                    </div>
+                    <div class="row">
+                        <h4>Download App</h4>
+                        <div class="col-lg-6">
+
+                            <div>
+                                <img src="https://www.jiomart.com/assets/ds2web/jds-icons/google-play-icon.svg" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div>
+                                <img src="https://www.jiomart.com/assets/ds2web/jds-icons/ios_app_icon.svg" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+<!-- Bootstrap Js link -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+<!-- slider js link -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="JS/script.js"></script>
+
+</html>

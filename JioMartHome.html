@@ -1,0 +1,3090 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JioMart-Ecommerce</title>
+
+    <!-- Bootstrap css link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <!-- slider css link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <!-- local css link -->
+    <link rel="stylesheet" href="CSS/Style.css">
+</head>
+
+<body>
+
+    <!-- model start-------------------- -->
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-center cc" id="exampleModalLabel">Login?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="Error">
+                        <div class="mb-3 ItemsDiv">
+                            <label for="recipient-name" class="col-form-label">Enter Your Name:</label>
+                            <input type="text" class="form-control" id="recipient-name" placeholder="Name" name="uname">
+                            <span class="spans"></span>
+                        </div>
+                        <div class="mb-3 ItemsDiv">
+                            <label for="recipient-name" class="col-form-label">Enter Your Email:</label>
+                            <input type="text" class="form-control" id="recipient-name" placeholder="Email" name="uemail">
+                            <span class="spans"></span>
+                        </div>
+                        <div class="mb-3 ItemsDiv">
+                            <label for="recipient-name" class="col-form-label">Enter Your Password:</label>
+                            <input type="text" class="form-control" id="recipient-name" placeholder="Password" name="upassword">
+                            <span class="spans"></span>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-success w-100 p-2" type="button">Send</button>
+
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <!--  <button type="button" class="btn btn-primary">Send message</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Model closed---------------- -->
+
+
+    <header class="container-fluid  header p-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg " id="">
+                        <a href="#" class="navbar-brand">
+                            <img src="https://www.jiomart.com/assets/ds2web/images/Jiomart-logo-ds2.0.svg?v=24" alt="">
+                        </a>
+                        <!--  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#MenuItems" aria-controls="navbarScroll" aria-expanded="false">
+                            <span class="navbar-toggler-icon"></span>
+                          </button> -->
+                        <div class="collapse navbar-collapse" id="Menu">
+                            <ul class="navbar-nav justify-content-end">
+                                <li class="nav-item align-content-center justify-content-end">
+                                    <a href="#" class="nav-link" id="deliver"><i class="fa-solid fa-location-dot"></i>Deliver to Mumbai 400020</a>
+
+                                </li>
+                                <li class="nav-item d-block">
+                                    <a href="#" class="nav-link mt-2">
+                                        <!--  <button id="btns"><i class="fa-solid fa-magnifying-glass"></i></button> -->
+
+                                        <form action="" class="d-flex">
+                                            <button id="bbt"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                            <input type="text" placeholder="Search Jio Mart" class="text-white">
+                                            <button><img src="https://www.jiomart.com/assets/ds2web/jds-icons/ds-list-icon.svg" alt=""></button>
+
+                                        </form>
+                                    </a>
+
+                                </li>
+
+                                <li class="nav-item align-content-center pb-3 m-lg-2 less">
+                                    <a href="#" class="nav-link" id="deliver"><img src="https://www.jiomart.com/assets/ds2web/jds-icons/cart-icon.svg" alt="" class="w-100" id="pop">
+                                        <div class="round text-white">1</div>
+
+                                    </a>
+
+                                </li>
+                                <li class="nav-item align-content-center sign signs">
+                                    <button type="button" class="" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" id="demo"><img src="https://www.jiomart.com/assets/ds2web/jds-icons/new-ds2-profile-icon.svg" alt=""> Sign In</button>
+                                    <a href="#" class="nav-link" id="deliver">
+
+                                    </a>
+
+                                </li>
+
+
+
+                            </ul>
+
+                        </div>
+
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="container-fluid" id="ItemsBar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg justify-content-between position-sticky top-0">
+                        <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#MenuItems" aria-controls="navbarScroll" aria-expanded="false">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+
+                        <div class="collapse navbar-collapse" id="MenuItems">
+
+                            <ul class="navbar-nav Items">
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Groceries</a>
+
+                                    <ul class="dropdown-menu " id="clr">
+                                        <li><a class="dropdown-item" href="JioMart.html">Biscuits, Drinks & <br>Packaged food</a></li>
+                                        <li><a class="dropdown-item" href="#">Fruits & vegetables</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Dairy & bakery</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care & Beauty</a></li>
+                                        <li><a class="dropdown-item" href="#">Home Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Kitchen Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Mom & Baby Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Pet Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Toys, Games & fitness</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care</a></li>
+
+
+                                    </ul>
+
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Premium Fruits</a>
+
+                                    <ul class="dropdown-menu " id="clr">
+                                        <li><a class="dropdown-item" href="#">Biscuits, Drinks & <br>Packaged food</a></li>
+                                        <li><a class="dropdown-item" href="#">Fruits & vegetables</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Dairy & bakery</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care & Beauty</a></li>
+                                        <li><a class="dropdown-item" href="#">Home Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Kitchen Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Mom & Baby Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Pet Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Toys, Games & fitness</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care</a></li>
+
+
+                                    </ul>
+
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Home & Kitchen Needs</a>
+
+                                    <ul class="dropdown-menu " id="clr">
+                                        <li><a class="dropdown-item" href="#">Biscuits, Drinks & <br>Packaged food</a></li>
+                                        <li><a class="dropdown-item" href="#">Fruits & vegetables</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Dairy & bakery</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care & Beauty</a></li>
+                                        <li><a class="dropdown-item" href="#">Home Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Kitchen Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Mom & Baby Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Pet Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Toys, Games & fitness</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care</a></li>
+
+
+                                    </ul>
+
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Fashion</a>
+
+
+                                    <ul class="dropdown-menu " id="clr">
+                                        <li><a class="dropdown-item" href="#">Biscuits, Drinks & <br>Packaged food</a></li>
+                                        <li><a class="dropdown-item" href="#">Fruits & vegetables</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Dairy & bakery</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care & Beauty</a></li>
+                                        <li><a class="dropdown-item" href="#">Home Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Kitchen Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Mom & Baby Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Pet Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Toys, Games & fitness</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care</a></li>
+
+
+                                    </ul>
+
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Electronics</a>
+
+                                    <ul class="dropdown-menu " id="clr">
+                                        <li><a class="dropdown-item" href="#">Biscuits, Drinks & <br>Packaged food</a></li>
+                                        <li><a class="dropdown-item" href="#">Fruits & vegetables</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Dairy & bakery</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care & Beauty</a></li>
+                                        <li><a class="dropdown-item" href="#">Home Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Kitchen Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Mom & Baby Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Pet Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Toys, Games & fitness</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care</a></li>
+
+
+                                    </ul>
+
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Jwellery</a>
+
+                                    <ul class="dropdown-menu " id="clr">
+                                        <li><a class="dropdown-item" href="#">Biscuits, Drinks & <br>Packaged food</a></li>
+                                        <li><a class="dropdown-item" href="#">Fruits & vegetables</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Dairy & bakery</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care & Beauty</a></li>
+                                        <li><a class="dropdown-item" href="#">Home Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Kitchen Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Mom & Baby Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Pet Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Toys, Games & fitness</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care</a></li>
+
+
+                                    </ul>
+
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Home Improvement</a>
+
+                                    <ul class="dropdown-menu " id="clr">
+                                        <li><a class="dropdown-item" href="#">Biscuits, Drinks & <br>Packaged food</a></li>
+                                        <li><a class="dropdown-item" href="#">Fruits & vegetables</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Dairy & bakery</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care & Beauty</a></li>
+                                        <li><a class="dropdown-item" href="#">Home Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Kitchen Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Mom & Baby Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Pet Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Toys, Games & fitness</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care</a></li>
+
+
+                                    </ul>
+
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Wellness</a>
+
+                                    <ul class="dropdown-menu " id="clr">
+                                        <li><a class="dropdown-item" href="#">Biscuits, Drinks & <br>Packaged food</a></li>
+                                        <li><a class="dropdown-item" href="#">Fruits & vegetables</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Dairy & bakery</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care & Beauty</a></li>
+                                        <li><a class="dropdown-item" href="#">Home Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Kitchen Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Mom & Baby Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Pet Care</a></li>
+                                        <li><a class="dropdown-item" href="#">Toys, Games & fitness</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooking Essentials</a></li>
+                                        <li><a class="dropdown-item" href="#">Personal Care</a></li>
+
+
+                                    </ul>
+
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">All Categories</a>
+
+                                </li>
+
+
+
+
+                            </ul>
+                        </div>
+
+                    </nav>
+
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="container-fluid mt-5">
+        <div class="container">
+            <div class="owl-carousel owl-theme" id="moves">
+                <div class="item">
+                    <div>
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1717790503_CleaningFest_2.jpg?im=Resize=(768,448)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="item">
+                    <div>
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1718025264_All_About_Mango_Final.jpg?im=Resize=(768,448)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="item">
+                    <div>
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1719381335_Chesse_delight_west.jpg?im=Resize=(768,448)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="item">
+                    <div>
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1717177938_Rusk_Mela.jpg?im=Resize=(768,448)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="item">
+                    <div>
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1717790503_CleaningFest_2.jpg?im=Resize=(768,448)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="item">
+                    <div>
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1717177877_Back_to_School.jpg?im=Resize=(768,448)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="item">
+                    <div>
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1718025242_Catch_Banner.jpg?im=Resize=(768,448)" alt="" class="img-fluid">
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div>
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1717999859_RICE-FEST.jpg?im=Resize=(768,448)" alt="" class="img-fluid">
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div>
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1717790474_ENGLISH.jpg?im=Resize=(768,448)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="item">
+                    <div>
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1717178296_Oral_Care.jpg?im=Resize=(768,448)" alt="" class="img-fluid">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- <div class="row">
+                <div class="col-lg-4">
+                    <div>
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1717790503_CleaningFest_2.jpg?im=Resize=(768,448)" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+    </section>
+
+    <section class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="img1">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1714050495_DailyMandi_1184x200.jpg?im=Resize=(2368,400)" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-lg-6">
+                    <div>
+                        <h4>Grocery Trending Picks</h4>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-end">
+                        <h5>View All</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <section class="container-fluid my-4">
+        <div class="container">
+            <div class="owl-carousel owl-theme" id="caros">
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491278308/priya-fortified-with-vitamin-a-d-refined-sunflower-oil-1-l-product-images-o491278308-p491278308-0-202203170524.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/490001795/maaza-mango-drink-1-2-l-product-images-o490001795-p490001795-0-202301272130.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/494260170/bharat-chana-dal-1-kg-product-images-o494260170-p606721409-0-202401271413.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491398437/nivea-aloe-hydration-body-lotion-with-aloe-vera-for-instant-hydration-in-summer-400-ml-product-images-o491398437-p491398437-0-202301201903.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/490003834/maggi-2-minute-masala-instant-noodles-560-g-product-images-o490003834-p490003834-0-202406241836.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491319789/sunfeast-dark-fantasy-original-choco-filled-cookie-275-g-product-images-o491319789-p491319789-0-202406171649.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491582190/unibic-fruit-nut-delight-cookies-500-g-product-images-o491582190-p491582190-0-202302191346.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/490998044/nivea-soft-light-moisturiser-cream-for-face-hands-body-300-ml-product-images-o490998044-p490998044-0-202305301942.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491319789/sunfeast-dark-fantasy-original-choco-filled-cookie-275-g-product-images-o491319789-p491319789-0-202406171649.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491278308/priya-fortified-with-vitamin-a-d-refined-sunflower-oil-1-l-product-images-o491278308-p491278308-0-202203170524.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!--  <div class="row">
+                <div class="col-lg-3">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491278308/priya-fortified-with-vitamin-a-d-refined-sunflower-oil-1-l-product-images-o491278308-p491278308-0-202203170524.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+                        <img src="https://www.jiomart.com/assets/ds2web/jds-icons/icon-veg.svg" alt="">
+                        <div>
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+    </section>
+
+    <section class="container-fluid my-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div>
+                        <h3>Mega Deal Zone</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="mega">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713183030_2.jpg?im=Resize=(368,538)" alt="" class="img-fluid " width="200px">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713183030_2.jpg?im=Resize=(368,538)" alt="" class="img-fluid " width="200px">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713183030_2.jpg?im=Resize=(368,538)" alt="" class="img-fluid " width="200px">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="container-fluid my-4">
+        <div class="container">
+            <section class="container-fluid my-4">
+                <div class="container">
+                    <div class="owl-carousel owl-theme" id="caros">
+                        <div class="item">
+                            <div class="GroceryItems border">
+                                <img src="https://www.jiomart.com//images/product/original/491278308/priya-fortified-with-vitamin-a-d-refined-sunflower-oil-1-l-product-images-o491278308-p491278308-0-202203170524.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                                <div>
+                                    <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                                    <p>Priya Fortified with Vitamin <br> A & D..</p>
+                                    <h5>Rs.275</h5>
+                                    <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                                    <div class="Counter">
+                                        <button id="Carts">Add Cart</button>
+                                        <button id="Add">+</button>
+                                        <button id="btn">0</button>
+                                        <button id="Sub">-</button>
+                                    </div>
+                                </div>
+                                <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="GroceryItems border">
+                                <img src="https://www.jiomart.com//images/product/original/490001795/maaza-mango-drink-1-2-l-product-images-o490001795-p490001795-0-202301272130.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                                <div>
+                                    <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                                    <p>Priya Fortified with Vitamin <br> A & D..</p>
+                                    <h5>Rs.275</h5>
+                                    <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                                    <div class="Counter">
+                                        <button id="Carts">Add Cart</button>
+                                        <button id="Add">+</button>
+                                        <button id="btn">0</button>
+                                        <button id="Sub">-</button>
+                                    </div>
+                                </div>
+                                <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="GroceryItems border">
+                                <img src="https://www.jiomart.com//images/product/original/494260170/bharat-chana-dal-1-kg-product-images-o494260170-p606721409-0-202401271413.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                                <div>
+                                    <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                                    <p>Priya Fortified with Vitamin <br> A & D..</p>
+                                    <h5>Rs.275</h5>
+                                    <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                                    <div class="Counter">
+                                        <button id="Carts">Add Cart</button>
+                                        <button id="Add">+</button>
+                                        <button id="btn">0</button>
+                                        <button id="Sub">-</button>
+                                    </div>
+                                </div>
+                                <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="GroceryItems border">
+                                <img src="https://www.jiomart.com//images/product/original/491398437/nivea-aloe-hydration-body-lotion-with-aloe-vera-for-instant-hydration-in-summer-400-ml-product-images-o491398437-p491398437-0-202301201903.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                                <div>
+                                    <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                                    <p>Priya Fortified with Vitamin <br> A & D..</p>
+                                    <h5>Rs.275</h5>
+                                    <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                                    <div class="Counter">
+                                        <button id="Carts">Add Cart</button>
+                                        <button id="Add">+</button>
+                                        <button id="btn">0</button>
+                                        <button id="Sub">-</button>
+                                    </div>
+                                </div>
+                                <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="GroceryItems border">
+                                <img src="https://www.jiomart.com//images/product/original/493660866/frooti-mango-drink-2-l-product-images-o493660866-p597738392-0-202301202030.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                                <div>
+                                    <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                                    <p>Priya Fortified with Vitamin <br> A & D..</p>
+                                    <h5>Rs.275</h5>
+                                    <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                                    <div class="Counter">
+                                        <button id="Carts">Add Cart</button>
+                                        <button id="Add">+</button>
+                                        <button id="btn">0</button>
+                                        <button id="Sub">-</button>
+                                    </div>
+                                </div>
+                                <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="GroceryItems border">
+                                <img src="https://www.jiomart.com//images/product/original/491086175/tropicano-slice-mango-drink-1-75-l-product-images-o491086175-p491086175-0-202207272007.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                                <div>
+                                    <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                                    <p>Priya Fortified with Vitamin <br> A & D..</p>
+                                    <h5>Rs.275</h5>
+                                    <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                                    <div class="Counter">
+                                        <button id="Carts">Add Cart</button>
+                                        <button id="Add">+</button>
+                                        <button id="btn">0</button>
+                                        <button id="Sub">-</button>
+                                    </div>
+                                </div>
+                                <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="GroceryItems border">
+                                <img src="https://www.jiomart.com//images/product/original/490004177/mirinda-orange-2-25-l-product-images-o490004177-p490004177-0-202203151914.jpg?im=Resize=(310,310)"><br>
+
+                                <div>
+                                    <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                                    <p>Priya Fortified with Vitamin <br> A & D..</p>
+                                    <h5>Rs.275</h5>
+                                    <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                                    <div class="Counter">
+                                        <button id="Carts">Add Cart</button>
+                                        <button id="Add">+</button>
+                                        <button id="btn">0</button>
+                                        <button id="Sub">-</button>
+                                    </div>
+                                </div>
+                                <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="GroceryItems border">
+                                <img src="https://www.jiomart.com//images/product/original/490004164/coca-cola-2-25-l-product-images-o490004164-p490004164-0-202203170437.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                                <div>
+                                    <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                                    <p>Priya Fortified with Vitamin <br> A & D..</p>
+                                    <h5>Rs.275</h5>
+                                    <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                                    <div class="Counter">
+                                        <button id="Carts">Add Cart</button>
+                                        <button id="Add">+</button>
+                                        <button id="btn">0</button>
+                                        <button id="Sub">-</button>
+                                    </div>
+                                </div>
+                                <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="GroceryItems border">
+                                <img src="https://www.jiomart.com//images/product/original/490005092/red-bull-energy-drink-250-ml-4-pcs-product-images-o490005092-p490005092-0-202311301549.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                                <div>
+                                    <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                                    <p>Priya Fortified with Vitamin <br> A & D..</p>
+                                    <h5>Rs.275</h5>
+                                    <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                                    <div class="Counter">
+                                        <button id="Carts">Add Cart</button>
+                                        <button id="Add">+</button>
+                                        <button id="btn">0</button>
+                                        <button id="Sub">-</button>
+                                    </div>
+                                </div>
+                                <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="GroceryItems border">
+                                <img src="https://www.jiomart.com//images/product/original/491179454/coca-cola-zero-sugar-300-ml-product-images-o491179454-p491179454-0-202209301805.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                                <div>
+                                    <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                                    <p>Priya Fortified with Vitamin <br> A & D..</p>
+                                    <h5>Rs.275</h5>
+                                    <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                                    <div class="Counter">
+                                        <button id="Carts">Add Cart</button>
+                                        <button id="Add">+</button>
+                                        <button id="btn">0</button>
+                                        <button id="Sub">-</button>
+                                    </div>
+                                </div>
+                                <div class="heart">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!--  <div class="row">
+                        <div class="col-lg-3">
+                            <div class="GroceryItems border">
+                                <img src="https://www.jiomart.com//images/product/original/491278308/priya-fortified-with-vitamin-a-d-refined-sunflower-oil-1-l-product-images-o491278308-p491278308-0-202203170524.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+                                <img src="https://www.jiomart.com/assets/ds2web/jds-icons/icon-veg.svg" alt="">
+                                <div>
+                                    <p>Priya Fortified with Vitamin <br> A & D..</p>
+                                    <h5>Rs.275</h5>
+                                    <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                                    <div class="Counter">
+                                        <button id="Carts">Add Cart</button>
+                                        <button id="Add">+</button>
+                                        <button id="btn">0</button>
+                                        <button id="Sub">-</button>
+                                    </div>
+                                </div>
+        
+        
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </section>
+
+    <section class="container-fluid my-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Sort By Category</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713046245_edible.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713044926_atta.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713044966_anaj.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713044992_dals.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713045029_dry.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713045063_masala.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="container-fluid my-2">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713045087_biscuits.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713045445_noodles.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713045470_tea.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713045496_colddrinks.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1714636290_shop.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713045561_kitchen.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="container-fluid my-2">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713045599_fruits.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713045626_homecare.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713045930_hygiene.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713045496_colddrinks.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713045960_beauty.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713046027_health.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="container-fluid my-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Trending Brands</h3>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </section>
+    <section class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+
+
+                    <div class="owl-carousel owl-theme" id="caro2">
+                        <div class="item">
+                            <div>
+                                <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713035171_coke.jpg?im=Resize=(368,452)" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div>
+                                <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713035686_daawat.jpg?im=Resize=(368,452)" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div>
+                                <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713035719_comfort.jpg?im=Resize=(368,452)" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div>
+                                <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713035746_amul.jpg?im=Resize=(368,452)" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div>
+                                <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713035798_saffola.jpg?im=Resize=(368,452)" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div>
+                                <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713426629_polyset.jpg?im=Resize=(368,452)" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div>
+                                <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713426691_homeone.jpg?im=Resize=(368,452)" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div>
+                                <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713035831_joyo.jpg?im=Resize=(368,452)" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div>
+                                <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713035859_ponds.jpg?im=Resize=(368,452)" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div>
+                                <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713035930_fogg.jpg?im=Resize=(368,452)" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div>
+                                <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713035957_flama.jpg?im=Resize=(368,452)" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div>
+                                <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713035897_maggie.jpg?im=Resize=(368,452)" alt="" class="img-fluid">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="container-fluid my-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="cont">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713181301_Tripura.jpg?im=Resize=(2368,400)" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="container-fluid">
+        <div class="container">
+            <div class="row">
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="container-fluid my-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Kitchen Must Haves</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713043703_Cooking_oil.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713043740_Dry_fruits_nuts.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713043765_Atta_flours.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1715176151_Rice_rice_products.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713043836_Masala_spices.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713043873_Dals_pulses.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="container-fluid my-4">
+        <div class="container">
+            <div class="owl-carousel owl-theme" id="caroses">
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/494260170/bharat-chana-dal-1-kg-product-images-o494260170-p606721409-0-202401271413.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491417390/good-life-toor-dal-2-kg-product-images-o491417390-p491417390-0-202401111922.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491186631/good-life-w320-cashews-500-g-product-images-o491186631-p491186631-0-202301171615.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491278308/priya-fortified-with-vitamin-a-d-refined-sunflower-oil-1-l-product-images-o491278308-p491278308-0-202203170524.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491349660/good-life-chakki-atta-10-kg-product-images-o491349660-p491349660-0-202404221630.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491203242/good-life-yellow-kishmish-500-g-product-images-o491203242-p491203242-0-202306141844.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491551213/tata-rock-salt-1-kg-product-images-o491551213-p491551213-0-202402011628.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491504124/super-sarvottam-physically-refined-rice-bran-oil-1-l-product-images-o491504124-p491504124-0-202307061545.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491551493/good-life-sugar-m-1-kg-product-images-o491551493-p491551493-0-202204281542.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491504124/super-sarvottam-physically-refined-rice-bran-oil-1-l-product-images-o491504124-p491504124-0-202307061545.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!--  <div class="row">
+                <div class="col-lg-3">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491278308/priya-fortified-with-vitamin-a-d-refined-sunflower-oil-1-l-product-images-o491278308-p491278308-0-202203170524.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+                        <img src="https://www.jiomart.com/assets/ds2web/jds-icons/icon-veg.svg" alt="">
+                        <div>
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+    </section>
+
+    <section class="container-fluid my-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Food & Beverages</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713042890_Cold_drinks_juices.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713042919_Biscuits_cookies.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713042951_Tea_cofee.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713042991_Chocolate_candies.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713043016_Noodles_sauces.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713043041_Snacks_namkeen.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="container-fluid my-4">
+        <div class="container">
+            <h3>Deals On Food</h3>
+            <div class="owl-carousel owl-theme" id="caros">
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491695463/britannia-good-day-cashew-biscuits-1-kg-product-images-o491695463-p590116903-0-202308241215.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/rvfkdnzkt5/true-elements-muesli-fruity-delight-700gm-product-images-orvfkdnzkt5-p607222899-0-202401061428.png?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/492391349/kissan-fresh-tomato-ketchup-1-1-kg-product-images-o492391349-p590809928-0-202402011901.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/rvkbcgyvwk/myfitness-chocolate-crunchy-peanut-butter-510-gms-product-images-orvkbcgyvwk-p595324637-0-202211151319.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/rvkbcgyvwk/myfitness-chocolate-crunchy-peanut-butter-510-gms-product-images-orvkbcgyvwk-p595324637-0-202211151319.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="https://www.jiomart.com//images/product/original/490001860/cadbury-dairy-milk-roast-almond-chocolate-36-g-product-images-o490001860-p490001860-0-202203150040.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491696354/lay-s-american-style-cream-onion-potato-chips-90-g-product-images-o491696354-p590121272-0-202307142033.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/492391349/kissan-fresh-tomato-ketchup-1-1-kg-product-images-o492391349-p590809928-0-202402011901.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/490001860/cadbury-dairy-milk-roast-almond-chocolate-36-g-product-images-o490001860-p490001860-0-202203150040.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/rvwun6h2lz/btw-bikaneri-bhujia-namkeen-1kg-product-images-orvwun6h2lz-p606421216-0-202311301150.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!--  <div class="row">
+                <div class="col-lg-3">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491278308/priya-fortified-with-vitamin-a-d-refined-sunflower-oil-1-l-product-images-o491278308-p491278308-0-202203170524.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+                        <img src="https://www.jiomart.com/assets/ds2web/jds-icons/icon-veg.svg" alt="">
+                        <div>
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+    </section>
+
+
+    <section class="container-fluid my-4">
+        <div class="container">
+            <div class="owl-carousel owl-theme" id="caros">
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/494260170/bharat-chana-dal-1-kg-product-images-o494260170-p606721409-0-202401271413.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491417390/good-life-toor-dal-2-kg-product-images-o491417390-p491417390-0-202401111922.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491186631/good-life-w320-cashews-500-g-product-images-o491186631-p491186631-0-202301171615.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491278308/priya-fortified-with-vitamin-a-d-refined-sunflower-oil-1-l-product-images-o491278308-p491278308-0-202203170524.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491349660/good-life-chakki-atta-10-kg-product-images-o491349660-p491349660-0-202404221630.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491203242/good-life-yellow-kishmish-500-g-product-images-o491203242-p491203242-0-202306141844.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491551213/tata-rock-salt-1-kg-product-images-o491551213-p491551213-0-202402011628.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491504124/super-sarvottam-physically-refined-rice-bran-oil-1-l-product-images-o491504124-p491504124-0-202307061545.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491551493/good-life-sugar-m-1-kg-product-images-o491551493-p491551493-0-202204281542.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491504124/super-sarvottam-physically-refined-rice-bran-oil-1-l-product-images-o491504124-p491504124-0-202307061545.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!--  <div class="row">
+                <div class="col-lg-3">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491278308/priya-fortified-with-vitamin-a-d-refined-sunflower-oil-1-l-product-images-o491278308-p491278308-0-202203170524.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+                        <img src="https://www.jiomart.com/assets/ds2web/jds-icons/icon-veg.svg" alt="">
+                        <div>
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+    </section>
+
+
+
+    <section class="container-fluid mt-5">
+        <div class="container">
+            <div class="owl-carousel owl-theme" id="caro4">
+                <div class="item">
+                    <div>
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713425975_artstationary_banner.jpg?im=Resize=(768,448)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="item">
+                    <div>
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713089169_homeneeds.jpg?im=Resize=(768,448)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="item">
+                    <div>
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713089213_container.jpg?im=Resize=(768,448)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="item">
+                    <div>
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713088354_EatHealthy.jpg?im=Resize=(768,448)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="item">
+                    <div>
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713088395_Jams.jpg?im=Resize=(768,448)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="item">
+                    <div>
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713088201_Milkshakes.jpg?im=Resize=(768,448)" alt="" class="img-fluid">
+                    </div>
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+            <!-- <div class="row">
+                <div class="col-lg-4">
+                    <div>
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1717790503_CleaningFest_2.jpg?im=Resize=(768,448)" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+    </section>
+
+    <section class="container-fluid my-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Home & Kitchen Needs</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713042536_Kitchen_tools.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713042564_Stationery.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713042595_Bottles.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713042619_Bathroom.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713042645_Bedsheets.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713042669_Dinner_set.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <section class="container-fluid my-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Kitchen Special</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713041790_Salt_sugar_jaggery.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713041819_Soya_quinoa_millets.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713041973_Cooking_oil.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713041999_Regional_rice.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713042025_Dry_fruits.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713042049_Organic_range.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="container-fluid my-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Home Care</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713041162_detergents.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713041190_dishwashers.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713041221_floor_toilet_cleaners.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713041251_handash_sanitizers.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713175694_airfreshners.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713041309_insect_repellent.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <section class="container-fluid my-4">
+        <div class="container">
+            <h2>Home Care Top Picks</h2>
+            <div class="owl-carousel owl-theme" id="caros">
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/rvgiwqhkez/active-white-detergent-powder-10-kg-family-pack-product-images-orvgiwqhkez-p603002057-0-202307071839.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/rvtmfjuxuo/lizol-disinfectant-surface-floor-cleaner-liquid-citrus-5-litre-product-images-orvtmfjuxuo-p601213316-0-202403271318.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/rvhluyebo3/lyzoo-laundry-detergent-top-and-front-load-liquid-detergent-5-lt-buy-1-get-1-free-product-images-orvhluyebo3-p604693471-0-202309202129.png?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491252834/tide-lemon-mint-detergent-powder-5-kg-1kg-free-product-images-o491252834-p590860214-0-202311101802.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/rv7ut76syt/herbal-strategi-natural-laundry-detergent-1-ltr-product-images-orv7ut76syt-p608686621-0-202404160404.png?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491335764/ariel-matic-front-load-detergent-powder-4-kg-get-extra-2-kg-free-product-images-o491335764-p491335764-0-202310232042.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/rv5d6tnija/lizol-disinfectant-surface-floor-cleaner-liquid-combo-floral-2l-lavender-2l-kills-99-9-germs-india-s-1-floor-cleaner-product-images-orv5d6tnija-p606614102-0-202312081254.jpg?im=Resize=(310,310)"
+                            alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/rv5d6tnija/lizol-disinfectant-surface-floor-cleaner-liquid-combo-floral-2l-lavender-2l-kills-99-9-germs-india-s-1-floor-cleaner-product-images-orv5d6tnija-p606614102-0-202312081254.jpg?im=Resize=(310,310)"
+                            alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/rvhi1p7xb4/kirmit-toilet-bowl-cleaner-flush-tank-tablets-very-good-fragrance-stain-remover-for-toilet-bowl-pack-of-10-product-images-orvhi1p7xb4-p597780073-0-202301231515.jpg?im=Resize=(310,310)"
+                            alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491961089/rin-detergent-powder-5-kg-product-images-o491961089-p590140436-0-202206221041.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <section class="container-fluid my-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Kitchen Special</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713041790_Salt_sugar_jaggery.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713041819_Soya_quinoa_millets.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713041973_Cooking_oil.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713041999_Regional_rice.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713042025_Dry_fruits.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="radius">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713042049_Organic_range.jpg?im=Resize=(368,538)" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="container-fluid my-4">
+        <div class="container">
+            <h2>Home Care Top Picks</h2>
+            <div class="owl-carousel owl-theme" id="caros">
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/490001387/amul-butter-100-g-carton-product-images-o490001387-p490001387-0-202203170403.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/490010311/amul-taaza-homogenised-toned-milk-1-l-tetra-pak-product-images-o490010311-p490010311-0-202203152257.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/490001401/amul-cheese-block-200-g-carton-product-images-o490001401-p490001401-0-202306061709.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/490010287/delicious-fat-spread-500-g-carton-product-images-o490010287-p490010287-0-202203150530.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491582577/amul-kool-kesar-flavoured-milk-180-ml-bottle-product-images-o491582577-p491582577-0-202203152258.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491022105/amul-taaza-toned-milk-200-ml-tetra-pak-product-images-o491022105-p491022105-0-202203150700.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491022105/amul-taaza-toned-milk-200-ml-tetra-pak-product-images-o491022105-p491022105-0-202203150700.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/rv5d6tnija/lizol-disinfectant-surface-floor-cleaner-liquid-combo-floral-2l-lavender-2l-kills-99-9-germs-india-s-1-floor-cleaner-product-images-orv5d6tnija-p606614102-0-202312081254.jpg?im=Resize=(310,310)"
+                            alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/490006894/milky-mist-paneer-200-g-pack-product-images-o490006894-p490006894-0-202203170956.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="GroceryItems border">
+                        <img src="https://www.jiomart.com//images/product/original/491961089/rin-detergent-powder-5-kg-product-images-o491961089-p590140436-0-202206221041.jpg?im=Resize=(310,310)" alt="" class="img-fluid w-75"><br>
+
+                        <div>
+
+                            <img src="https://www.jiomart.com/assets/version1718896754/global/smart-bazaar-tag.svg" alt="" class="w-50">
+                            <p>Priya Fortified with Vitamin <br> A & D..</p>
+                            <h5>Rs.275</h5>
+                            <h5>Rs.199.00 <span class="text-decoration-line-through text-secondary spn">Rs.260.00</span> <span class="spn1">23% Off</span></h5>
+                            <div class="Counter">
+                                <button id="Carts">Add Cart</button>
+                                <button id="Add">+</button>
+                                <button id="btn">0</button>
+                                <button id="Sub">-</button>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <section class="container-fluid my-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="shop">
+                        <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713442152_continueshopping.jpg?im=Resize=(2368,400)" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="contents">
+                        <h5>All Categories</h5>
+                        <p>Grocery</p>
+                        <p>Electronics</p>
+                        <p>Fashion</p>
+                        <p>Home & Kitchen</p>
+                        <p>Premium Fruits</p>
+                        <p>Books</p>
+                        <p>Furniture</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="contents">
+                        <h5>Popular Categories</h5>
+                        <p>Steples</p>
+                        <p>Babrages</p>
+                        <p>Personal Care</p>
+                        <p>Home Care</p>
+                        <p>Fruits & Vegitables</p>
+                        <p>Baby Care</p>
+                        <p>Baby Care & Branded Foods</p>
+                        <p>Dairy & Bakery</p>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="contents">
+                        <h5>Customer Account</h5>
+                        <p>My Account</p>
+                        <p>My Orders</p>
+                        <p>Wishlist</p>
+                        <p>Payment Methods</p>
+                        <p>Delivery Addresses</p>
+                        <p>Jiomart Wallet</p>
+
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="contents">
+                        <h5>Help & Support</h5>
+                        <p>About Us</p>
+                        <p>FAQ</p>
+                        <p>Terms & Conditions</p>
+                        <p>Privacy Policy</p>
+                        <p>E-Waste</p>
+                        <p>Cancellation & Return <br> Policy</p>
+                        <p>Shipping & Delivery <br> Poilicy</p>
+                        <p>AC Installation by resQ</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div>
+                        <h5>Contact Us</h5>
+                        <p>WhatsApp us: 70003 70003 Call us: 1800 890 1222 8:00 AM to 8:00 PM, 365 days</p> <br>
+                        <p>Should you encounter any bugs, glitches, lack of functionality, delayed deliveries, billing errors or other problems on the website, please email us on cs@jiomart.com</p>
+                    </div>
+                    <div class="row">
+                        <h4>Download App</h4>
+                        <div class="col-lg-6">
+
+                            <div>
+                                <img src="https://www.jiomart.com/assets/ds2web/jds-icons/google-play-icon.svg" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div>
+                                <img src="https://www.jiomart.com/assets/ds2web/jds-icons/ios_app_icon.svg" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+
+<!-- Bootstrap Js link -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js "></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js "></script>
+<!-- slider js link -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js "></script>
+<script src="JS/script.js "></script>
+<!-- tooltip js link -->
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+
+<script>
+    $('#moves').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        autoplay: true,
+        dots: true,
+
+        center: true,
+
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 3
+            }
+        }
+    })
+    $('#caro6').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        autoplay: true,
+
+
+        center: true,
+        dots: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 5
+            }
+        }
+    })
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        autoplay: true,
+        center: true,
+        dots: false,
+
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 5
+            }
+        }
+    })
+    $('#caro').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+
+
+        dots: true,
+
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 4
+            }
+        }
+    })
+    $('#caro2').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+
+        dots: false,
+
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 3
+            }
+        }
+    })
+
+    $('#caroses').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+
+        dots: false,
+
+
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 4
+            }
+        }
+    })
+
+    $('#caro4').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+
+
+        dots: false,
+
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 3
+            }
+        }
+    })
+
+    let ErrorBox = document.querySelector('#Error')
+    let ItemsDiv = document.querySelectorAll('.ItemsDiv span')
+
+    ErrorBox.addEventListener('submit', (event) => {
+        if (event.target.uname.value == '') {
+            ErrorBox[0].ItemsDiv.innerHTML = 'welcome'
+        }
+    })
+</script>
+
+
+
+
+</html>
